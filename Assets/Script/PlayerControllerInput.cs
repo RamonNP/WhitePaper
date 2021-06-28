@@ -6,16 +6,22 @@ public class PlayerControllerInput : MonoBehaviour
 {
     public DialogController dialogController;
     public bool lookLeft;
+    public bool tecladoInput;
     private Rigidbody2D rb2D;
     private float input_x = 0;
+    private float input_xC = 0;
     private float input_y = 0;
     [SerializeField] private float speed;
     [SerializeField]private bool isWalking = false;
     Vector2 movement = Vector2.zero;
+    Vector2 movementControle = Vector2.zero;
     private Animator playerAnimator;
+    public GameObject bauAbrir;
     // Start is called before the first frame update
     void Start()
     {
+        bauAbrir.SetActive(false);
+        tecladoInput = true;
         rb2D = GetComponent<Rigidbody2D>(); 
         playerAnimator = GetComponent<Animator>(); 
     }
@@ -23,17 +29,29 @@ public class PlayerControllerInput : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        input_x = Input.GetAxisRaw("Horizontal");
-        input_y = Input.GetAxisRaw("Vertical");
+        if(tecladoInput){
+            input_x = Input.GetAxisRaw("Horizontal");
+            input_y = Input.GetAxisRaw("Vertical");
+        }
         isWalking = (input_x != 0 || input_y != 0);
         if(isWalking){
             playerAnimator.SetBool("isWalking", true);
         } else {
             playerAnimator.SetBool("isWalking", false);
         }
-        movement = new Vector2(input_x, input_y);
+        //if(input_x > 0 || input_y > 0) {
+            movement = new Vector2(input_x, input_y);
+        //}
+        //if(movementControle != 0)
+        if(controle){
+
+        //rb2D.MovePosition(rb2D.position + movementControle * speed * Time.fixedDeltaTime);
+        } else {
+
+        }
         rb2D.MovePosition(rb2D.position + movement * speed * Time.fixedDeltaTime);
         VerificaFlipOLD(input_x);
+        //VerificaFlipOLD(input_xC);
     }
      public void VerificaFlipOLD(float x) {
 
@@ -63,11 +81,42 @@ public class PlayerControllerInput : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
-        dialogController.transform.gameObject.SetActive(true);
-        dialogController.initializeDialog(other.GetComponent<NpcSentence>().sentences, other.GetComponent<NpcSentence>().npcName);
+        if(other.tag == "NPC") {
+            dialogController.transform.gameObject.SetActive(true);
+            dialogController.initializeDialog(other.GetComponent<NpcSentence>().sentences, other.GetComponent<NpcSentence>().npcName);
+        }
     }
 
     private void OnTriggerExit2D(Collider2D other) {
         dialogController.transform.gameObject.SetActive(false);
+        if(other.gameObject.name == "NPCABRIRBAU") {
+            bauAbrir.SetActive(true);
+        }
+    }
+
+public bool controle;
+    public void UpDown(float input) {
+        //print(input);
+        input_y = input;
+        if(input == 0){
+            tecladoInput = true;
+        } else {
+            tecladoInput = false;
+        }
+        //movementControle = new Vector2(input_x, input_y);
+        //controle =true;
+    }
+    public void RighLefht(float input) {
+        //print(input);
+        input_x = input;
+        if(input == 0){
+            tecladoInput = true;
+        } else {
+            tecladoInput = false;
+        }
+        //movementControle = new Vector2(input_x, input_y);
+        //controle =true;
+        //input_xC = input;
+       // if(input > 0)
     }
 }

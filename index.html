@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		
+		<title>Cardano Warriors</title>
+		
+		<style>
+		body, html{
+			margin:0;
+			padding:0;
+		}
+		.main{
+			max-width:1200px;
+			margin:0 auto;
+			overflow:hidden;
+			background:lightgray;
+		}
+		.content{
+			align-items:center;
+			width:100%;
+			margin-right:-210px;
+			background:rgb(0, 0, 0);
+		}
+		.content-inner{
+			margin-right:210px;
+		}
+		.sidebar{
+			background:red;
+			float:right;
+			width:200px;
+		}
+		.menu{
+			width:100%;
+			background:blue;
+		}
+		.menu ul{
+			margin:0; 
+			padding:0;
+		}
+		.menu ul li{
+			display:inline-block;
+			*display:inline;
+			zoom:1;
+			margin:0; 
+			padding:0;
+		}
+		.menu ul li a{
+			display:block;
+			padding:20px;
+			color:#fff;
+		}
+		.footer{
+			width:100%;
+			background:rgb(105, 105, 105);
+			text-align:center;
+		}
+		
+		@media screen and (max-width: 700px) {
+			.sidebar, .content-inner, .content{
+				float: none;
+				width: 100%;
+				margin-right:0;
+			}
+		}
+		</style>
+		<script src="Build/UnityLoader.js"></script>
+		<script>
+		  UnityLoader.instantiate("unityContainer", "Build/MEUBUILD.json");
+		</script>
+		</head>
+	<body>
+		<div class="main">
+
+			<div class="content">
+				<div class="content-inner">
+					
+				</div>
+				
+			</div>
+
+			
+			<br style="clear:both">
+			
+			<div class="footer">
+				<div id="unityContainer"></div>
+			</div>
+		</div>
+	</body>
+</html>
