@@ -1,9 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI ;
 
 public class PlayerControllerInput : MonoBehaviour
 {
+    public GameObject controleMobile;
     public DialogController dialogController;
     public bool lookLeft;
     public bool tecladoInput;
@@ -20,10 +22,19 @@ public class PlayerControllerInput : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        controleMobile.SetActive(isMobile());
         bauAbrir.SetActive(false);
-        tecladoInput = true;
+        tecladoInput = !isMobile();
         rb2D = GetComponent<Rigidbody2D>(); 
         playerAnimator = GetComponent<Animator>(); 
+    }
+
+     public bool isMobile()
+    {
+        #if !UNITY_EDITOR && UNITY_WEBGL
+            return WebGLHandler.IsMobile();
+        #endif
+        return false;
     }
 
     // Update is called once per frame
@@ -32,6 +43,9 @@ public class PlayerControllerInput : MonoBehaviour
         if(tecladoInput){
             input_x = Input.GetAxisRaw("Horizontal");
             input_y = Input.GetAxisRaw("Vertical");
+        } else {
+            input_x = MSJoystickController.joystickInput.x;
+            input_y = MSJoystickController.joystickInput.y;
         }
         isWalking = (input_x != 0 || input_y != 0);
         if(isWalking){
