@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - NPC
+  - NPC_SITE
+  - NPC_GUARDIAN
+  - PORTAL
   layers:
   - Default
   - TransparentFX

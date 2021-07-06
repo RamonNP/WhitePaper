@@ -27,6 +27,7 @@ public class PlayerControllerInput : MonoBehaviour
         tecladoInput = !isMobile();
         rb2D = GetComponent<Rigidbody2D>(); 
         playerAnimator = GetComponent<Animator>(); 
+        dialogController.transform.gameObject.SetActive(false);
     }
 
      public bool isMobile()
@@ -53,41 +54,25 @@ public class PlayerControllerInput : MonoBehaviour
         } else {
             playerAnimator.SetBool("isWalking", false);
         }
-        //if(input_x > 0 || input_y > 0) {
-            movement = new Vector2(input_x, input_y);
-        //}
-        //if(movementControle != 0)
-        if(controle){
+        movement = new Vector2(input_x, input_y);
 
-        //rb2D.MovePosition(rb2D.position + movementControle * speed * Time.fixedDeltaTime);
-        } else {
-
-        }
         rb2D.MovePosition(rb2D.position + movement * speed * Time.fixedDeltaTime);
         VerificaFlipOLD(input_x);
-        //VerificaFlipOLD(input_xC);
     }
      public void VerificaFlipOLD(float x) {
-
-
-         if (isWalking)
+        if (isWalking)
         {
-            //playerAnimator.SetFloat("input_x", input_x);
-            //playerAnimator.SetFloat("input_y", input_y);
             if (x > 0 && lookLeft == true)
             {
                 Flip();
-                //NetworkManager.instance.EmitAnimation ("Flip", x.ToString(), GetComponent<Player>().entity.id);
             } else if(x < 0 && lookLeft == false)
             {
                 Flip();
-                //NetworkManager.instance.EmitAnimation ("Flip", x.ToString(), GetComponent<Player>().entity.id);
             }
         }
     }
     private void Flip()
     {
-        //USADO PELO SERVIDOR PARA ATUALIZAR POSIÇOES DE OUTROS JOGADORES
         Vector3 theScale = this.transform.localScale;
         theScale.x *= -1;
         this.transform.localScale = theScale;
@@ -95,42 +80,56 @@ public class PlayerControllerInput : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
-        if(other.tag == "NPC") {
+        NpcSentence npc = other.transform.GetComponent<NpcSentence>();
+        if(other.tag == "NPC_GUARDIAN") {
             dialogController.transform.gameObject.SetActive(true);
-            dialogController.initializeDialog(other.GetComponent<NpcSentence>().sentences, other.GetComponent<NpcSentence>().npcName);
+            dialogController.initializeDialog(npc.sentences, npc.npcName, npc.currentSentence);
+        } else if(other.tag == "NPC") {
+            dialogController.transform.gameObject.SetActive(true);
+            dialogController.initializeDialog(npc.sentences, npc.npcName, npc.currentSentence);
+            if(npc.nextNpcQuest != null){
+                npc.nextNpcQuest.currentSentence = npc.sentenceQuestNextNpc;
+            }
+        } else if(other.tag == "PORTAL") {
+            Transform obj =  other.transform.GetChild(0);
+            obj.gameObject.GetComponent<NpcSentence>().changeAnimation();
+            obj =  other.transform.GetChild(1);
+            obj.gameObject.GetComponent<NpcSentence>().changeAnimation();
         }
     }
 
     private void OnTriggerExit2D(Collider2D other) {
-        dialogController.transform.gameObject.SetActive(false);
         if(other.gameObject.name == "NPCABRIRBAU") {
             bauAbrir.SetActive(true);
+            dialogController.transform.gameObject.SetActive(false);
+        } else if(other.tag == "NPC_GUARDIAN") {
+            dialogController.transform.gameObject.SetActive(false);
+        }else if(other.tag == "NPC") {
+            dialogController.transform.gameObject.SetActive(false);
+        } else if(other.tag == "PORTAL") {
+            Transform obj =  other.transform.GetChild(0);
+            obj.gameObject.GetComponent<NpcSentence>().changeAnimation();
+            obj =  other.transform.GetChild(1);
+            obj.gameObject.GetComponent<NpcSentence>().changeAnimation();
+
         }
     }
 
 public bool controle;
     public void UpDown(float input) {
-        //print(input);
         input_y = input;
         if(input == 0){
             tecladoInput = true;
         } else {
             tecladoInput = false;
         }
-        //movementControle = new Vector2(input_x, input_y);
-        //controle =true;
     }
     public void RighLefht(float input) {
-        //print(input);
         input_x = input;
         if(input == 0){
             tecladoInput = true;
         } else {
             tecladoInput = false;
         }
-        //movementControle = new Vector2(input_x, input_y);
-        //controle =true;
-        //input_xC = input;
-       // if(input > 0)
     }
 }

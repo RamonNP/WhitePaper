@@ -23,10 +23,10 @@ public class DialogController : MonoBehaviour
        txtDescricao.text = sentences[currentSentence];
     }
 
-    public void initializeDialog(string[] sentences, string name){
+    public void initializeDialog(string[] sentences, string name, int currentSentence){
         txtName.text = name;
         this.sentences = sentences;
-        currentSentence = 0;
+        this.currentSentence = currentSentence;
     }
 
     public void nextSentence(){

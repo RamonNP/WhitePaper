@@ -1,0 +1,13 @@
+1)[ ]Portal dos Guardioes;
+2)[X]Mover a fazenda para cima.
+3)[X]sistema NPC mudar as Falas e organizar os lugares dos npcs.
+4)[X]Placas das cassas.
+5)[X]Replicar a Pagina the Colletion(Apenas um NPC com Link externo para o site).
+6)[X]Replicar a Pagina About us.
+7)[X]Replicar a Pagina Find us. 
+8)[ ]entrar na tela com landScape. (pedir para o Paulo)
+9)[X]animaçoes dos Guardioes.
+
+Hi, my name is Esteves, I'll help you find Litepaper. I think he's in a chest in the forest to the northwest.
+Hi, my name is Paulo, I will help you find Litepaper. I think he's on the other side of the bridge.
+Hi my name is Ramon, I will help you find the Litepaper. I think he's in a chest just across the bridge.
