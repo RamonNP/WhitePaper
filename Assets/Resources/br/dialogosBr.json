@@ -1,0 +1,71 @@
+{
+    "Itens":
+    [
+        {
+            "chave": "txtTituloAboutUs",
+            "valor": " <br> Combinando arte com tecnologia, a plataforma Cardano Warriors NFT comemora os antigos jogos de RPG da época de ouro dos videogames. <br> <br> Utilizamos um algoritmo exclusivo para a geração de personagens que possuem um caráter único, mas sempre respeitando as raças e classes de cada personagem, parecendo ter sido feitos à mão. <br> <br> Além de uma coleção, nossa maior ambição é levar esses personagens para um jogo para celular, e possibilitar sua evolução, além da aquisição de armas e equipamentos. E agregue uso e mais valor ao seu token. <br> <br>  Reúna o seu guerreiro e contribua para tornar este projeto uma realidade."
+        },
+        {
+            "chave": "txtTitlaName",
+            "valor": "sobre nós"
+        },
+        {
+            "chave": "txtxtSubTituloAboutUs",
+            "valor": "O time"
+        },
+        {
+            "chave": "txtSubTituloTextoAboutUs",
+            "valor": "Somos uma equipe de desenvolvedores apaixonados por jogos, arte e tecnologia e estamos combinando tecnologia de ponta e arte para trazer aos nossos usuários uma experiência memorável no blockchain da Cardano."
+        },
+        {
+            "chave": "txtDescricaotheColletion",
+            "valor": "Clique no link para acessar a coleção."
+        },
+        {
+            "chave": "NPCABRIRBAU1",
+            "valor": "Que lindo dia de colheita !!!"
+        },
+        {
+            "chave": "NPCABRIRBAU2",
+            "valor": "Olá, meu nome é Esteves, vou ajudá-lo a encontrar o Litepaper. Acho que ele está em um baú na floresta ao sul."
+        },
+        {
+            "chave": "NPCPaulo",
+            "valor": "Olá, meu nome é Paulo, vou ajudá-lo a encontrar o Litepaper. Rumores dizem que o fazendeiro Esteves sabe de sua localização."
+        },
+        {
+            "chave": "NPCknightGuardiao2",
+            "valor": "Esta área não está disponível."
+        },
+        {
+            "chave": "NPCknightGuardiao1",
+            "valor": "Volte outro dia."
+            
+        },
+        {
+            "chave": "txtSetingsTitulo",
+            "valor": "Configuração"
+        },
+        {
+            "chave": "txtSetingsSound",
+            "valor": "Som:"
+        },
+        {
+            "chave": "txtColletion",
+            "valor": "Coleção"
+        },
+        {
+            "chave": "txtAboutUs",
+            "valor": "sobre nós"
+        },
+        {
+            "chave": "txtFindUs",
+            "valor": "contato"
+        },
+        {
+            "chave": "txtFarm",
+            "valor": "fazenda"
+        }
+    ]
+  }
+

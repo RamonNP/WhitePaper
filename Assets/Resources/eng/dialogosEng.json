@@ -1,0 +1,70 @@
+{
+    "Itens":
+    [
+        {
+            "chave": "txtTituloAboutUs",
+            "valor": " <br> Combining art with technology, the Cardano Warriors NFT platform celebrate to the old RPG games of the golden age of video games. <br><br>            We use an exclusive algorithm for the generation of characters that have a unique character, but always respecting the races and classes of each character, seeming to have been made by hand.   <br><br>         In addition to a collection, our biggest ambition is take these characters to a mobile game, and make their evolution possible, in addition to the acquisition of weapons and equipment. And bring use and more value for your token.      <br><br>      Get your warrior, and contribute to making this project a reality."
+        },
+        {
+            "chave": "txtTitlaName",
+            "valor": "about us"
+        },
+        {
+            "chave": "txtxtSubTituloAboutUs",
+            "valor": "the team"
+        },
+        {
+            "chave": "txtSubTituloTextoAboutUs",
+            "valor": "We are a team of developers passionate about games, art and technology and we are combining cutting edge technology and art to bring our users a memorable experience on Cardano's blockchain."
+        },
+        {
+            "chave": "txtDescricaotheColletion",
+            "valor": "Click on the link to access the collection."
+        },
+        {
+            "chave": "NPCABRIRBAU1",
+            "valor": "What a beautiful day for a harvest!!!"
+        },
+        {
+            "chave": "NPCABRIRBAU2",
+            "valor": "Hi, my name is Esteves, I'll help you find Litepaper. I think he's in a chest in the woods to the south."
+        },
+        {
+            "chave": "NPCPaulo",
+            "valor": "Hi, my name is Paulo, I will help you find Litepaper. Rumor has it that Farmer Esteves is aware of its location."
+        },
+        {
+            "chave": "NPCknightGuardiao2",
+            "valor": "This area is unavailable."
+        },
+        {
+            "chave": "NPCknightGuardiao1",
+            "valor": "Come back another day."
+        },
+        {
+            "chave": "txtSetingsTitulo",
+            "valor": "Settings"
+        },
+        {
+            "chave": "txtSetingsSound",
+            "valor": "Sound:"
+        },
+        {
+            "chave": "txtColletion",
+            "valor": "the colletion"
+        },
+        {
+            "chave": "txtAboutUs",
+            "valor": "about us"
+        },
+        {
+            "chave": "txtFindUs",
+            "valor": "find us"
+        },
+        {
+            "chave": "txtFarm",
+            "valor": "farm"
+        }
+    ]
+  }
+

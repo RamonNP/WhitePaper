@@ -7,7 +7,6 @@ public class NpcSite : MonoBehaviour
     public GameObject uiPainel;
 
     private void Start() {
-        print("falso");
         uiPainel.SetActive(false);
     }
 

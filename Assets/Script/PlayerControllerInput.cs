@@ -100,7 +100,9 @@ public class PlayerControllerInput : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D other) {
         if(other.gameObject.name == "NPCABRIRBAU") {
-            bauAbrir.SetActive(true);
+            if(other.gameObject.GetComponent<NpcSentence>().currentSentence == 1){
+                bauAbrir.SetActive(true);
+            }
             dialogController.transform.gameObject.SetActive(false);
         } else if(other.tag == "NPC_GUARDIAN") {
             dialogController.transform.gameObject.SetActive(false);

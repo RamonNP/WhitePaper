@@ -37,8 +37,8 @@ public class BauController : MonoBehaviour
     }
 
     public void AbrirWhitPaper() {
-         Application.ExternalEval("window.open(\"https://www.twitter.com/GilesDMiddleton\",\"_blank\")");
+        Application.ExternalEval("window.open(\"https://storage.googleapis.com/cardano-nft/cardano-warriors-whitepaper/space_720x1280.gif\",\"_blank\")");
         //Application.ExternalEval("https://drive.google.com/file/d/1eZ0FEsL9lFPud_i-2axQtATpWMpTzIiP/view");
-         //Application.ExternalEval("window.open(\"https://drive.google.com/file/d/1eZ0FEsL9lFPud_i-2axQtATpWMpTzIiP/view\",\"_blank\")");
+        //Application.ExternalEval("window.open(\"https://drive.google.com/file/d/1eZ0FEsL9lFPud_i-2axQtATpWMpTzIiP/view\",\"_blank\")");
     }
 }
