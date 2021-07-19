@@ -32,7 +32,7 @@ public class IdiomaController : MonoBehaviour
     }
     public void SetLanguage(string _langID)
      {
-        print("LINGU*AGEM EXTERNA DO SITE"+_langID);
+        //print("LINGU*AGEM EXTERNA DO SITE"+_langID);
         MudarIdioma(_langID);
         idiomaAtual = _langID;
      }

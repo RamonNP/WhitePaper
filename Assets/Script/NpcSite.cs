@@ -12,7 +12,6 @@ public class NpcSite : MonoBehaviour
 
 
     private void OnTriggerEnter2D(Collider2D other) {
-        print(other.gameObject.tag);
         if(other.gameObject.tag == "Player") {
             uiPainel.SetActive(true);
         }

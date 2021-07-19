@@ -37,7 +37,14 @@ public class BauController : MonoBehaviour
     }
 
     public void AbrirWhitPaper() {
-        Application.ExternalEval("window.open(\"https://storage.googleapis.com/cardano-nft/cardano-warriors-whitepaper/space_720x1280.gif\",\"_blank\")");
+        string param = IdiomaController.instance.idiomaAtual;
+        if(IdiomaController.instance.idiomaAtual == "pt-BR" || IdiomaController.instance.idiomaAtual == "pt") {
+            param = "pt";
+        } else {
+            param = "en";
+        } 
+        Application.ExternalEval("window.open(\"https://www.litepaper.cardanowarriors.io/"+param+ "\",\"_blank\")");
+        //Application.ExternalEval("window.open(\"https://storage.googleapis.com/cardano-nft/cardano-warriors-whitepaper/white-paper.pdf\",\"_blank\")");
         //Application.ExternalEval("https://drive.google.com/file/d/1eZ0FEsL9lFPud_i-2axQtATpWMpTzIiP/view");
         //Application.ExternalEval("window.open(\"https://drive.google.com/file/d/1eZ0FEsL9lFPud_i-2axQtATpWMpTzIiP/view\",\"_blank\")");
     }

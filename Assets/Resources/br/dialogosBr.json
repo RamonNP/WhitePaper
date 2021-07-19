@@ -65,6 +65,42 @@
         {
             "chave": "txtFarm",
             "valor": "fazenda"
+        },
+        {
+            "chave": "npcNamePaulo",
+            "valor": "Paulo"
+        },
+        {
+            "chave": "npcNameGuardian",
+            "valor": "Guardião"
+        },
+        {
+            "chave": "npcNameEsteves",
+            "valor": "Esteves"
+        },
+        {
+            "chave": "txtDescricaoLitePaper",
+            "valor": "Clique no link para acessar o LitePaper."
+        },
+        {
+            "chave": "npcNameRicardo",
+            "valor": "Ricardo"
+        },
+        {
+            "chave": "npcNameEduardo",
+            "valor": "Eduardo"
+        },
+        {
+            "chave": "npcNameLucas",
+            "valor": "Lucas"
+        },
+        {
+            "chave": "npcNameFarm",
+            "valor": "Fazendeiro"
+        },
+        {
+            "chave": "npcNameConvidado",
+            "valor": "Convidado"
         }
     ]
   }

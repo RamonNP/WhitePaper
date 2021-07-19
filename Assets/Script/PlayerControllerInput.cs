@@ -5,8 +5,12 @@ using UnityEngine.UI ;
 
 public class PlayerControllerInput : MonoBehaviour
 {
+    public GameObject playerSkin;
+    public GameObject playerNameCanvas;
     public GameObject controleMobile;
     public DialogController dialogController;
+    public GameObject avatarGuardiao;
+    public GameObject avatarVillager;
     public bool lookLeft;
     public bool tecladoInput;
     private Rigidbody2D rb2D;
@@ -17,7 +21,7 @@ public class PlayerControllerInput : MonoBehaviour
     [SerializeField]private bool isWalking = false;
     Vector2 movement = Vector2.zero;
     Vector2 movementControle = Vector2.zero;
-    private Animator playerAnimator;
+    public Animator playerAnimator;
     public GameObject bauAbrir;
     // Start is called before the first frame update
     void Start()
@@ -26,8 +30,8 @@ public class PlayerControllerInput : MonoBehaviour
         bauAbrir.SetActive(false);
         tecladoInput = !isMobile();
         rb2D = GetComponent<Rigidbody2D>(); 
-        playerAnimator = GetComponent<Animator>(); 
-        dialogController.transform.gameObject.SetActive(false);
+        //playerAnimator = transform.GetChild(0).GetComponent<Animator>(); 
+        //dialogController.transform.gameObject.SetActive(false);
     }
 
      public bool isMobile()
@@ -73,20 +77,24 @@ public class PlayerControllerInput : MonoBehaviour
     }
     private void Flip()
     {
-        Vector3 theScale = this.transform.localScale;
+        Vector3 theScale = this.playerSkin.transform.localScale;
         theScale.x *= -1;
-        this.transform.localScale = theScale;
+        this.playerSkin.transform.localScale = theScale;
         lookLeft = !lookLeft;
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
         NpcSentence npc = other.transform.GetComponent<NpcSentence>();
         if(other.tag == "NPC_GUARDIAN") {
+            avatarVillager.SetActive(false);
+            avatarGuardiao.SetActive(true);
             dialogController.transform.gameObject.SetActive(true);
-            dialogController.initializeDialog(npc.sentences, npc.npcName, npc.currentSentence);
+            dialogController.initializeDialog(npc.sentences, npc.npcKeyName, npc.currentSentence);
         } else if(other.tag == "NPC") {
+            avatarVillager.SetActive(true);
+            avatarGuardiao.SetActive(false);
             dialogController.transform.gameObject.SetActive(true);
-            dialogController.initializeDialog(npc.sentences, npc.npcName, npc.currentSentence);
+            dialogController.initializeDialog(npc.sentences, npc.npcKeyName, npc.currentSentence);
             if(npc.nextNpcQuest != null){
                 npc.nextNpcQuest.currentSentence = npc.sentenceQuestNextNpc;
             }
