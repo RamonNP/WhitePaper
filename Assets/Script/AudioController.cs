@@ -13,7 +13,8 @@ public class AudioController : MonoBehaviour
 
 
    private void Start() {
-       PauseAudio();
+        PlayAudio();
+       //PauseAudio();
        //audioSource.Pause();
        //Debug.Log("AudioController PAUSE Audio");
        //Application.ExternalCall("playAudio");
