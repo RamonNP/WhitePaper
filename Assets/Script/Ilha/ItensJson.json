@@ -1,0 +1,138 @@
+{
+    "Itens":
+    [
+        {
+            "idItem": "HOUSE001",
+            "idItemImage": "H001",
+            "itemName": "Casa Azul",
+            "itemType": "2",
+            "itemCategory":"1",
+            "pathItem": "Prefabs/ItemWord",
+            "pathSprite": "Armas/Espadas/201-adaga_bronze",
+            "defense": "3",
+            "atack": "2"
+        },
+        {
+            "idItem": "HOUSE002",
+            "idItemImage": "H002",
+            "itemName": "Casa Vermelha",
+            "itemType": "3",
+            "itemCategory":"1",
+            "pathItem": "Prefabs/ItemWord",
+            "pathSprite": "Armas/Bestas/besta azul",
+            "defense": "0",
+            "atack": "10"
+        },
+        {
+            "idItem": "TREE001",
+            "idItemImage": "T001",
+            "itemName": "Arvore Grande",
+            "itemType": "3",
+            "itemCategory":"2",
+            "pathItem": "Prefabs/ItemWord",
+            "pathSprite": "Armas/Bestas/besta azul",
+            "defense": "0",
+            "atack": "10"
+        },
+        {
+            "idItem": "ITEM",
+            "idItemImage": "IHAM001",
+            "itemName": "Hammer",
+            "itemType": "3",
+            "itemCategory":"3",
+            "pathItem": "Prefabs/ItemWord",
+            "pathSprite": "Armas/Bestas/besta azul",
+            "defense": "0",
+            "atack": "10"
+        },
+        {
+            "idItem": "ITEM",
+            "idItemImage": "IHEL001",
+            "itemName": "Arvore Grande",
+            "itemType": "3",
+            "itemCategory":"3",
+            "pathItem": "Prefabs/ItemWord",
+            "pathSprite": "Armas/Bestas/besta azul",
+            "defense": "0",
+            "atack": "10"
+        },
+        {
+            "idItem": "ITEM",
+            "idItemImage": "IHEL002",
+            "itemName": "Arvore Grande",
+            "itemType": "3",
+            "itemCategory":"3",
+            "pathItem": "Prefabs/ItemWord",
+            "pathSprite": "Armas/Bestas/besta azul",
+            "defense": "0",
+            "atack": "10"
+        },
+        {
+            "idItem": "ITEM",
+            "idItemImage": "IHEL003",
+            "itemName": "Arvore Grande",
+            "itemType": "3",
+            "itemCategory":"3",
+            "pathItem": "Prefabs/ItemWord",
+            "pathSprite": "Armas/Bestas/besta azul",
+            "defense": "0",
+            "atack": "10"
+        },
+        {
+            "idItem": "ITEM",
+            "idItemImage": "IHEL004",
+            "itemName": "Arvore Grande",
+            "itemType": "3",
+            "itemCategory":"3",
+            "pathItem": "Prefabs/ItemWord",
+            "pathSprite": "Armas/Bestas/besta azul",
+            "defense": "0",
+            "atack": "10"
+        },
+        {
+            "idItem": "ITEM",
+            "idItemImage": "ISHI001",
+            "itemName": "Arvore Grande",
+            "itemType": "3",
+            "itemCategory":"3",
+            "pathItem": "Prefabs/ItemWord",
+            "pathSprite": "Armas/Bestas/besta azul",
+            "defense": "0",
+            "atack": "10"
+        },
+        {
+            "idItem": "ITEM",
+            "idItemImage": "ITRI001",
+            "itemName": "Arvore Grande",
+            "itemType": "3",
+            "itemCategory":"3",
+            "pathItem": "Prefabs/ItemWord",
+            "pathSprite": "Armas/Bestas/besta azul",
+            "defense": "0",
+            "atack": "10"
+        },
+        {
+            "idItem": "ITEM",
+            "idItemImage": "ITRI002",
+            "itemName": "Arvore Grande",
+            "itemType": "3",
+            "itemCategory":"3",
+            "pathItem": "Prefabs/ItemWord",
+            "pathSprite": "Armas/Bestas/besta azul",
+            "defense": "0",
+            "atack": "10"
+        },
+        {
+            "idItem": "WAR001",
+            "idItemImage": "ITRI002",
+            "itemName": "Arvore Grande",
+            "itemType": "3",
+            "itemCategory":"3",
+            "pathItem": "Prefabs/ItemWord",
+            "pathSprite": "Armas/Bestas/besta azul",
+            "defense": "0",
+            "atack": "10"
+        }
+    ]
+  }
+
