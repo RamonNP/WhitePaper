@@ -10,6 +10,7 @@ public class Owner : MonoBehaviour
     public GameObject painelHouse;
     public GameObject painelDecoration;
     public GameObject painelItens;
+    public GameObject painelNft;
     public TextAsset jsonFile1;
     public TextAsset jsonFile2;
     public TextAsset jsonFile31;
@@ -55,7 +56,7 @@ public class Owner : MonoBehaviour
                     itemBtn.addEventItem(item.idItemImage); //apenas podemos iniciar o evento quando sabe qual objeto sera setado.
                 break;
                 case ItemCategory.NFT :
-                    itemBtn.btnAdd.transform.parent = painelItens.transform;
+                    itemBtn.btnAdd.transform.parent = painelNft.transform;
                     itemBtn.addEventItem(item.idItemImage); //apenas podemos iniciar o evento quando sabe qual objeto sera setado.
                 break;
 

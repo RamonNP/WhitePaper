@@ -132,6 +132,28 @@
             "pathSprite": "Armas/Bestas/besta azul",
             "defense": "0",
             "atack": "10"
+        },
+        {
+            "idItem": "WAR001",
+            "idItemImage": "ITRI002",
+            "itemName": "Arvore Grande",
+            "itemType": "3",
+            "itemCategory":"3",
+            "pathItem": "Prefabs/ItemWord",
+            "pathSprite": "Armas/Bestas/besta azul",
+            "defense": "0",
+            "atack": "10"
+        },
+        {
+            "idItem": "WAR001",
+            "idItemImage": "NFTW001",
+            "itemName": "Arvore Grande",
+            "itemType": "4",
+            "itemCategory":"4",
+            "pathItem": "Prefabs/ItemWord",
+            "pathSprite": "Armas/Bestas/besta azul",
+            "defense": "0",
+            "atack": "10"
         }
     ]
   }

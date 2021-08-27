@@ -8722,6 +8722,7 @@ MonoBehaviour:
   painelHouse: {fileID: 1548908861}
   painelDecoration: {fileID: 1131522515}
   painelItens: {fileID: 1376668546}
+  painelNft: {fileID: 1735889069}
   jsonFile1: {fileID: 4900000, guid: 9f8f8c1f702f1cd47bc7e4dc9864f00f, type: 3}
   jsonFile2: {fileID: 0}
   jsonFile31: {fileID: 0}
